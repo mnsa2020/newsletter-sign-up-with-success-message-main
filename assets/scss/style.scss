@@ -1,0 +1,229 @@
+// Variables
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$fontFamily: "Roboto", sans-serif;
+
+$tomato: hsl(4, 100%, 67%);
+
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+// Variables
+
+// Globals
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $fontFamily;
+}
+p {
+  font-size: 16px;
+}
+// Globals
+
+// Main
+main {
+  position: relative;
+  height: 100vh;
+  background: $darkSlateGrey;
+  .sign-up {
+    display: flex;
+    flex-direction: column-reverse;
+    background: $white;
+    .text {
+      margin-inline: auto;
+      padding-inline: 10px;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 00;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      p {
+        line-height: 1.5;
+      }
+      ol {
+        margin-block: 25px;
+        list-style-image: url("../images/icon-list.svg");
+        padding-left: 25px;
+        li {
+          padding-left: 10px;
+          margin-bottom: 10px;
+          vertical-align: middle;
+        }
+      }
+      form {
+        margin-top: 40px;
+        label {
+          display: block;
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
+        input[type="text"] {
+          width: 100%;
+          height: 55px;
+          border-radius: 10px;
+          padding: 20px;
+          font-size: 17px;
+          margin-bottom: 25px;
+        }
+        input[type="button"] {
+          width: 100%;
+          height: 55px;
+          border-radius: 10px;
+          padding: 0 30px;
+          font-size: 16px;
+          font-weight: 400;
+          color: $white;
+          background: $charcoalGrey;
+          &:hover {
+            background: $tomato;
+          }
+        }
+      }
+    }
+    @media (min-width: 375px) {
+      width: 930px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      border-radius: 35px;
+      .text {
+        padding-left: 40px;
+        margin-right: 70px;
+        h1 {
+          font-size: 55px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+        p {
+          line-height: 1.5;
+        }
+        ol {
+          margin-block: 25px;
+          list-style-image: url("../images/icon-list.svg");
+          padding-left: 25px;
+          li {
+            padding-left: 10px;
+            margin-bottom: 10px;
+            vertical-align: middle;
+          }
+        }
+        form {
+          margin-top: 40px;
+          label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          input[type="text"] {
+            width: 100%;
+            height: 55px;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 17px;
+            margin-bottom: 25px;
+          }
+          input[type="button"] {
+            width: 100%;
+            height: 55px;
+            border-radius: 10px;
+            padding: 0 30px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $white;
+            background: $charcoalGrey;
+          }
+        }
+      }
+    }
+    .img {
+      img {
+        @media (min-width: 375px) {
+          content: url(../images/illustration-sign-up-desktop.svg);
+        }
+      }
+    }
+  }
+  .message {
+    display: none;
+    position: absolute;
+    // display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: $white;
+    padding: 20px;
+    height: 100%;
+    .text {
+      img {
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1;
+      }
+      p {
+        margin-top: 20px;
+        line-height: 1.6;
+      }
+    }
+    button {
+      background: $charcoalGrey;
+      color: $white;
+      padding: 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      &:hover {
+        background: $tomato;
+      }
+    }
+    @media (min-width: 375px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 520px;
+      border-radius: 30px;
+      width: 500px;
+      padding: 30px 60px 40px 60px;
+      .text {
+        h1 {
+          font-weight: 700;
+          font-size: 60px;
+          letter-spacing: -2px;
+          line-height: 0.95;
+        }
+      }
+    }
+  }
+  .attribution {
+    background: $white;
+    font-size: 11px;
+    text-align: center;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+    @media (min-width: 375px) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+// Main
